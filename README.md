@@ -22,9 +22,38 @@ $$\rho = \frac{\text{reflectance}}{\text{radiance}}$$
 > **optical and radar data**: Optical data is based on measuring radiation reflected from the surface, so it appears more "photograph-like". Radar data, by contrast, is active measurement: the sensor emits its own signal and then measures the returning signal, providing different information that must be interpreted differently.
 
 ## Earth Observation Data sources
-### Landsat images
 
-### Sentinel data from ![Copernicus](https://browser.dataspace.copernicus.eu/assets/copernicus-banner-CaeUPWRx.svg) Browser
+[![](/documentation/images/satimagesourcepaths.png)](https://gemini.google.com/share/b3a9de9041cd)
+
+[![](/documentation/images/sentinel%20vs%20landsat.png)](https://gemini.google.com/share/ef829d2059a5)
+
+### Landsat images
+> #### **Use cases:**
+> **Land cover classification and change detection**: Landsat's 30-meter resolution and long historical archive (since 1972) make it ideal for tracking long-term land use changes, deforestation patterns, and urban expansion over decades.
+>
+> **Agricultural monitoring and crop yield prediction**: The thermal bands in Landsat (Band 10 and 11) provide land surface temperature data that Sentinel lacks, enabling soil moisture assessment and crop stress detection.
+>
+> **Hydrological studies**: Landsat's thermal infrared capabilities are particularly useful for monitoring water body temperatures, identifying groundwater discharge zones, and studying glacial dynamics.
+
+![](/documentation/images/landsat_data_applications.png)
+
+- https://earthexplorer.usgs.gov/
+- https://livingatlas.arcgis.com/landsatexplorer/#mapCenter=19.01111%2C47.51448%2C11.775&mode=dynamic&mainScene=%7CNatural+Color+for+Visualization%7C
+
+
+### Sentinel images
+> #### **Use cases:** 
+> **Multispectral monitoring with high revisit frequency**: Sentinel-2's 5-day revisit time (or 2-3 days with both satellites) provides frequent observations ideal for rapid environmental monitoring, vegetation phenology tracking, and near-real-time disaster response without Landsat's 16-day revisit cycle.
+>
+> **High-resolution multispectral analysis**: Sentinel-2's 10-meter resolution (compared to Landsat's 30-meter) enables detailed urban mapping, infrastructure monitoring, and precise change detection at finer spatial scales.
+>
+> **Coastal and water quality monitoring**: Sentinel-2's coastal aerosol band (Band 1) and enhanced spectral resolution support improved water quality assessment, harmful algal bloom detection, and coastal ecosystem monitoring.
+>
+> **Atmospheric correction and standardized products**: Sentinel-2 Level 2A products come pre-processed with atmospheric correction applied, reducing preprocessing requirements and enabling faster analysis workflows compared to raw Landsat data.
+
+![](/documentation/images/sentinel_data_applications.png)
+
+#### Sentinel data from ![Copernicus](https://browser.dataspace.copernicus.eu/assets/copernicus-banner-CaeUPWRx.svg) Browser
 1. Go to https://browser.dataspace.copernicus.eu Here is a bit more detailed Introduction video: https://www.youtube.com/watch?v=F0lIn5r6ZWk 
 2. [Choose and get the Sentinel Satellite data from Copernicus Browser manually](https://www.youtube.com/watch?v=vgjXk85LIbE)
 
@@ -55,8 +84,10 @@ Install:
 !pip install geopy
 ```
 
+### Sentinel
 
-
+### Landsat
+- https://pypi.org/project/landsatxplore/
 
 ## Types of satellite images, and how to handle them
  
