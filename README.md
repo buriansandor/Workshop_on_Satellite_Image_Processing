@@ -130,9 +130,11 @@ Python example: https://www.kaggle.com/code/sndorburian/discvr-epic-images
 >
 > It can be usefull while, it has a 3 meter resolution, and a daily coverage.
 
+Main page for researchers: https://www.planet.com/science/
 
-- Main page for researchers: https://www.planet.com/science/
+**To access the 30 day trial go here:** https://insights.planet.com/sign-up
 
+**To access for regular tasks:**
 1. register a free account on: https://eoiam-idp.eo.esa.int/myaccount
 2. visit: https://earth.esa.int/eogateway
 3. [search for `planetscope`](https://earth.esa.int/eogateway/search?text=planetscope)
