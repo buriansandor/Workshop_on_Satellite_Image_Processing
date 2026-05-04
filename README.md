@@ -1,5 +1,5 @@
 # Workshop on Satellite Image Processing
-> In this workshop we will talk about [MORE HERE LATER]
+> In this workshop we will talk about satellite image processing techniques, data sources, and practical applications in Earth observation
 
 ## The Basics of Satellite Image Processing 
 
@@ -193,6 +193,7 @@ Running Example: https://www.kaggle.com/code/sndorburian/sentinel-satellite-imag
 Code: [sentinel-satellite-image-demo.ipynb](/sentinel-satellite-image-demo.ipynb)
 
 More Code snippet for sentinel hub: https://github.com/eu-cdse/notebook-samples/tree/main
+And from Sentinel JupyterLab: https://dataspace.copernicus.eu/analyse/jupyterlab
 
 ## Types of satellite image channels, and how to handle them
 
@@ -265,8 +266,10 @@ ARD is especially useful for time-series analysis, machine learning, and large-s
 
 > **Why:** Data cubes are useful because they shift analysis from a file-by-file workflow to a query-based workflow, which is much better for large time series and repeated monitoring. They are commonly built from analysis-ready data, so users can focus more on analysis and less on repeated preprocessing.
 
-Running Example: https://www.kaggle.com/code/sndorburian/landsat-ndvi-data-cube-margaret-island-bud
-Code: [landsat-ndvi-data-cube-margaret-island-bud.ipynb](/landsat-ndvi-data-cube-margaret-island-bud.ipynb)
+- Running Example: https://www.kaggle.com/code/sndorburian/landsat-ndvi-data-cube-margaret-island-bud
+- Code: [landsat-ndvi-data-cube-margaret-island-bud.ipynb](/landsat-ndvi-data-cube-margaret-island-bud.ipynb)
+
+To create Data cubes from raw files, use: https://opendatacube.readthedocs.io/en/latest/
 
 ## Segment Any Model (SAM)
 
