@@ -151,12 +151,20 @@ Install:
 !pip install geopy
 ```
 
-### Sentinel
-
 ### Landsat
-https://medium.com/data-science/downloading-landsat-satellite-images-with-python-a2d2b5183fb7
 
+
+
+#### `landsatxplore`
 - https://pypi.org/project/landsatxplore/
+1. Register an USGS account: https://ers.cr.usgs.gov/
+2. To use `landsatxplore` you will need python3.11 environment, this means you have to probably scale down your system.
+3. `pip install landsatxplore`
+4. Follow the instructions from the GitHub page of the project: https://github.com/yannforget/landsatxplore 
+
+more: https://medium.com/data-science/downloading-landsat-satellite-images-with-python-a2d2b5183fb7
+
+### Sentinel
 
 ## Types of satellite image channels, and how to handle them
 
