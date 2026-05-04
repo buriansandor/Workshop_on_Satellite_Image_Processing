@@ -70,7 +70,66 @@ A detailed short guide to Copernicus Browser: https://www.youtube.com/watch?v=07
 - **Real-time data availability**: Supports time-sensitive applications like weather monitoring and disaster response
 - **Complementary data**: Fills gaps between polar-orbiting satellites by providing continuous observations of the same region
 
-This makes EPIC particularly valuable for studying atmospheric dynamics, vegetation phenology, and rapid environmental changes. https://www.kaggle.com/code/sndorburian/discvr-epic-images
+This makes EPIC particularly valuable for studying atmospheric dynamics, vegetation phenology, and rapid environmental changes. 
+
+Python example: https://www.kaggle.com/code/sndorburian/discvr-epic-images
+
+</details>
+
+<details>
+<summary>GEDI Lidar</summary>
+
+![GEDI Ecosystem Lidar](https://gedi.umd.edu/wp-content/uploads/2023/09/gedi-logo.jpeg)
+
+> This is not an imaging sensor in the traditional sense, but rather a laser rangefinder.
+>
+> Forest canopy height and biomass estimation. If someone works in environmental protection, this is a mandatory element.
+>
+> Not raster, but point cloud or dense point series. The geopandas and h5py libraries are required for it.
+
+- NASA GEDI projet main page: https://www.earthdata.nasa.gov/data/instruments/gedi-lidar
+- GEDI projects: https://gedi.umd.edu/
+- Getting started with GEDI in Python: https://lpdaac.usgs.gov/documents/630/GEDI_L2A_Tutorial.html
+
+</details>
+
+<details>
+<summary>MODIS (Terra & Aqua)</summary>
+
+> Before Sentinel-3 was launched, MODIS was the workhorse of research. Although its resolution (250m-1km) lags behind Sentinel, it has over 20 years of continuous data.
+>
+> Advantages: Long term climate research and daily coverage
+
+- MODIS main page: https://modis.gsfc.nasa.gov/
+- MODIS Terra Data: https://terra.nasa.gov/data/modis-data
+- MODIS data in python: https://www.linkedin.com/pulse/download-combine-visualize-modis-python-tutorial-code-keyhan-gavahi-nvqkc
+- pip package: https://pypi.org/project/octvi/
+
+</details>
+
+<details>
+<summary>EnMAP</summary>
+
+![](https://www.enmap.org/_nuxt/img/9ebc66d.png)
+
+> The Environmental Mapping and Analysis Program (EnMAP) is a German hyperspectral satellite mission that monitors and characterizes Earth’s environment on a global scale. EnMAP measures geochemical, biochemical and biophysical variables providing information on the status and evolution of terrestrial and aquatic ecosystems. 
+
+- Main page: https://www.enmap.org/
+- Data access portal: https://planning.enmap.org/
+- Enamp data prerocessing tool in Python: https://github.com/GFZ/enpt
+- Processing EnMAP in MATLAB: https://mres.uni-potsdam.de/2026/04/16/importing-enmap-hyperspectral-images-with-matlab/ 
+
+</details>
+
+<details>
+<summary>PlanetScope</summary>
+
+> Although commercial, Planet has an excellent Education and Research program where researchers can access data for free.
+>
+> It can be usefull while, it has a 3 meter resolution, and a daily coverage.
+
+
+- Main page for researchers: https://www.planet.com/science/
 
 </details>
 
