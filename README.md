@@ -171,7 +171,7 @@ Code: [using-landsat-images-with-google-earth-engine.ipynb](/using-landsat-image
 #### Official USGS API
 1. Register an USGS account: https://ers.cr.usgs.gov/
 2. Get an API key
-3. Get Access to the USGS MACHINE interface (this will give access to API to download satellite images). *This can take 48 hour!*
+3. Get Access to the USGS MACHINE interface (this will give access to API to download satellite images). *This can take up to 48 hour or more!*
 
 Example: https://www.kaggle.com/code/sndorburian/usgs-landsat-api
 
@@ -216,7 +216,7 @@ Code: [sentinel-satellite-image-demo.ipynb](/sentinel-satellite-image-demo.ipynb
 | ---- | ---------- | ---- | ---- |
 | description | RGB composite displaying natural colors (Red, Green, Blue bands) for visual interpretation, appearing like a natural photograph | Normalized Difference Water Index; highlights water bodies by contrasting infrared and near-infrared reflectance | Normalized Difference Vegetation Index; measures vegetation health and density using near-infrared and red band reflectance |
 | Equation |        | $NDWI = \frac{(NIR - SWIR)}{(NIR + SWIR)}$ | $NDVI = \frac{NIR - Red}{NIR + Red}$ |
-| Example  |        | https://www.kaggle.com/code/sndorburian/get-the-shoreline-on-satellite-images | https://colab.research.google.com/drive/1d2Fkd-OIfSQLeh2B54iTpPRhotzEfvvJ?usp=sharing |
+| Example  |        | https://www.kaggle.com/code/sndorburian/get-the-shoreline-on-satellite-images | https://colab.research.google.com/drive/1d2Fkd-OIfSQLeh2B54iTpPRhotzEfvvJ?usp=sharing from the [Postfire biomass recovery based on Earth observation data](https://github.com/buriansandor/Postfire_biomass_and_wildlife_recovery_based_on_Earth_observation_data) project|
 
 > Where:
 > - NIR: Near-Infrared band (typically 0.76-0.90 μm)
@@ -227,12 +227,25 @@ Code: [sentinel-satellite-image-demo.ipynb](/sentinel-satellite-image-demo.ipynb
 
 ![](/documentation/images/SAR_satellite_images.png)
 
-- https://www.kaggle.com/code/sndorburian/polsar-data-processing-using-python
-- data: https://www.kaggle.com/datasets/sndorburian/saocom-geocoded-subset
+#### Comparison: SAR vs. Optical Satellite Resolution
+
+| Aspect | SAR (Radar) | Optical |
+| --- | --- | --- |
+| **Spatial Resolution** | 1-100 meters (varies by satellite) | 0.3-1000 meters (Sentinel-2: 10-60m, Landsat: 30m) |
+| **Temporal Resolution** | 6-12 days (Sentinel-1: 6 days) | 5-16 days (Sentinel-2: 5 days, Landsat: 16 days) |
+| **Spectral Resolution** | Single or dual polarization (VV, VH, HH, HV) | Multiple bands (Sentinel-2: 13 bands, Landsat: 11 bands) |
+| **Weather Dependency** | Cloud/darkness independent; all-weather | Cloud-limited; daylight required |
+| **Data Type** | Backscatter intensity; phase information available | Reflectance/radiance measurements across wavelengths |
+| **Best For** | Change detection, flood mapping, terrain analysis, deformation monitoring | Vegetation monitoring, water quality, land cover classification, thermal analysis |
+
+
+- Demo code: https://www.kaggle.com/code/sndorburian/polsar-data-processing-using-python
+- Data for the demo: https://www.kaggle.com/datasets/sndorburian/saocom-geocoded-subset
 
 
 
 ## New space constellations
+
 
 ### Analysis Ready Data
 
