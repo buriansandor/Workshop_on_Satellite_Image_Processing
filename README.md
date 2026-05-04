@@ -258,13 +258,29 @@ More Code snippet for sentinel hub: https://github.com/eu-cdse/notebook-samples/
 > **Why it matters**
 ARD is especially useful for time-series analysis, machine learning, and large-scale monitoring because it removes much of the repetitive setup work that would otherwise be needed before analysis.
 
-### Data cubes 
+### [Data cubes](https://www.perplexity.ai/apps/7c6a365b-34f8-41ea-ab55-7ab6a90f2065) 
 > **What:** Data cubes are a way to organize satellite and geospatial data as one multidimensional structure instead of many separate image files. In Earth observation, they usually stack data by space and time, and often also by spectral band, so the same location can be analyzed across many dates in one consistent framework.
 
-![](/documentation/images/datacubes.png)
+[![](/documentation/images/datacubes.png)](https://www.perplexity.ai/apps/7c6a365b-34f8-41ea-ab55-7ab6a90f2065)
 
 > **Why:** Data cubes are useful because they shift analysis from a file-by-file workflow to a query-based workflow, which is much better for large time series and repeated monitoring. They are commonly built from analysis-ready data, so users can focus more on analysis and less on repeated preprocessing.
 
+Running Example: https://www.kaggle.com/code/sndorburian/landsat-ndvi-data-cube-margaret-island-bud
+Code: [landsat-ndvi-data-cube-margaret-island-bud.ipynb](/landsat-ndvi-data-cube-margaret-island-bud.ipynb)
+
 ## Segment Any Model (SAM)
 
-https://livingatlas.arcgis.com/en/browse/?q=dlpk%20detection#d=2&q=dlpk+detection
+> The landscape of satellite image segmentation has shifted from labor-intensive manual labeling to the era of **Foundation Models**. At the forefront is [Meta’s Segment Anything Model (SAM)](https://medium.com/@beeilab.yt/segment-anythin-model-sam-for-satellite-image-segmentation-part-1-39f17e6eb2b3), which acts as a "Swiss Army knife" for identifying objects. Unlike traditional architectures like U-Net or DeepLabV3+, which require thousands of domain-specific training samples to recognize a "building" or a "tree," SAM is zero-shot. This means it understands the concept of "objectness" out of the box, allowing researchers to extract features using simple prompts like points or bounding boxes.
+>
+> For specialized Earth Observation (EO) workflows, tools like sam-geo have adapted these capabilities to handle geospatial coordinates and GeoTIFF formats directly. While SAM excels at rapid discovery and interactive mapping, traditional supervised models still hold their ground:
+>
+> > **[U-Net](https://github.com/reachsumit/deep-unet-for-satellite-image-segmentation) & [DeepLabV3+](https://learnopencv.com/deeplabv3-ultimate-guide/):** The reliable workhorses for specific, repetitive tasks (e.g., global road extraction) where a lightweight, highly-specialized model is more efficient than a massive transformer.
+> 
+> > [**SegFormer:**](https://github.com/NVlabs/SegFormer) A middle ground that utilizes hierarchical Transformers to capture both fine details and global context, often outperforming older CNNs in complex urban environments.
+>
+> > [**SAM 2:**](https://ai.meta.com/research/sam2/) The latest evolution, extending these capabilities to the temporal dimension—perfect for tracking changes across a time-series or "video" of satellite acquisitions.
+
+***Research Tip:*** *Choose SAM when you need to map a new area quickly without a training dataset. Choose U-Net or DeepLab when you have ample labels and need a production-ready pipeline for a single specific class.*
+
+**Other related models:** 
+- https://livingatlas.arcgis.com/en/browse/?q=dlpk%20detection#d=2&q=dlpk+detection
