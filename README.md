@@ -113,7 +113,8 @@ Python example: https://www.kaggle.com/code/sndorburian/discvr-epic-images
 ![](https://www.enmap.org/_nuxt/img/9ebc66d.png)
 
 > The Environmental Mapping and Analysis Program (EnMAP) is a German hyperspectral satellite mission that monitors and characterizes Earth’s environment on a global scale. EnMAP measures geochemical, biochemical and biophysical variables providing information on the status and evolution of terrestrial and aquatic ecosystems. 
-
+>
+> **Hyperspectral sensors** like EnMAP capture dozens to hundreds of narrow bands, allowing precise material identification and biochemical analysis. 
 - Main page: https://www.enmap.org/
 - Data access portal: https://planning.enmap.org/
 - Enamp data prerocessing tool in Python: https://github.com/GFZ/enpt
@@ -146,22 +147,49 @@ Install:
 ### Sentinel
 
 ### Landsat
+https://medium.com/data-science/downloading-landsat-satellite-images-with-python-a2d2b5183fb7
+
 - https://pypi.org/project/landsatxplore/
 
-## Types of satellite images, and how to handle them
- 
-### True Color
+## Types of satellite image channels, and how to handle them
 
-### NDWI 
-https://www.kaggle.com/code/sndorburian/get-the-shoreline-on-satellite-images
+> Satellite images contain multiple spectral bands (channels) that capture different wavelengths of electromagnetic radiation, each revealing different information about Earth's surface. 
+>
+> **Optical satellites** like Sentinel-2 and Landsat provide bands in visible, near-infrared, and short-wave infrared ranges, enabling applications like vegetation monitoring (NDVI), water detection (NDWI), and land cover classification. 
 
-### NDVI 
 
-$$NDVI = \frac{NIR - Red}{NIR + Red}$$
+### Common optical satellite channels include:
+- **Blue (B)**: 0.45-0.52 μm - water absorption, atmospheric correction
+- **Green (G)**: 0.52-0.60 μm - vegetation reflectance, chlorophyll content
+- **Red (R)**: 0.63-0.69 μm - vegetation discrimination, land-water boundaries
+- **Near-Infrared (NIR)**: 0.76-0.90 μm - vegetation vigor, water body delineation
+- **Short-Wave Infrared (SWIR)**: 1.55-2.30 μm - soil moisture, mineral composition
+- **Thermal Infrared (TIR)**: 10-12 μm - land surface temperature (Landsat only)
+- **Coastal Aerosol (CA)**: 0.43-0.45 μm - aerosol and coastal water monitoring (Sentinel-2)
+- **Vegetation Red Edge (VRE)**: 0.70-0.78 μm - fine vegetation analysis (Sentinel-2)
+
+***Always consider each sensor's spatial, spectral, and temporal resolution when selecting data for your application.***
+
+### Just a few examples:
+|      | True Color | NDWI | NDVI |
+| ---- | ---------- | ---- | ---- |
+| description | RGB composite displaying natural colors (Red, Green, Blue bands) for visual interpretation, appearing like a natural photograph | Normalized Difference Water Index; highlights water bodies by contrasting infrared and near-infrared reflectance | Normalized Difference Vegetation Index; measures vegetation health and density using near-infrared and red band reflectance |
+| Equation |        | $NDWI = \frac{(NIR - SWIR)}{(NIR + SWIR)}$ | $NDVI = \frac{NIR - Red}{NIR + Red}$ |
+| Example  |        | https://www.kaggle.com/code/sndorburian/get-the-shoreline-on-satellite-images | https://colab.research.google.com/drive/1d2Fkd-OIfSQLeh2B54iTpPRhotzEfvvJ?usp=sharing |
+
+> Where:
+> - NIR: Near-Infrared band (typically 0.76-0.90 μm)
+> - SWIR: Short-Wave Infrared band (typically 1.55-1.75 μm)
 
 ### SAR
+> **Radar satellites** like Sentinel-1 transmit their own signals and measure backscatter, penetrating clouds and providing data day/night providING A synthetic aperture radar (SAR) data in single or multiple polarizations (VV, VH, HH, HV), useful for change detection, flood mapping, and terrain analysis regardless of cloud cover or daylight conditions.
+
+![](/documentation/images/SAR_satellite_images.png)
+
 - https://www.kaggle.com/code/sndorburian/polsar-data-processing-using-python
 - data: https://www.kaggle.com/datasets/sndorburian/saocom-geocoded-subset
+
+
 
 ## New space constellations
 
