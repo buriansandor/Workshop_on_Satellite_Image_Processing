@@ -153,7 +153,13 @@ Install:
 
 ### Landsat
 
+### Google Earth Engine
 
+### Official USGS API
+1. Register an USGS account: https://ers.cr.usgs.gov/
+2. Get an API key
+3. Get Access to the USGS MACHINE interface (this will give access to API to download satellite images). *This can take 48 hour!*
+4. 
 
 #### `landsatxplore`
 - https://pypi.org/project/landsatxplore/
