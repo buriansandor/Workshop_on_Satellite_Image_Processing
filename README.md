@@ -192,6 +192,8 @@ More: https://medium.com/data-science/downloading-landsat-satellite-images-with-
 Running Example: https://www.kaggle.com/code/sndorburian/sentinel-satellite-image-demo
 Code: [sentinel-satellite-image-demo.ipynb](/sentinel-satellite-image-demo.ipynb)
 
+More Code snippet for sentinel hub: https://github.com/eu-cdse/notebook-samples/tree/main
+
 ## Types of satellite image channels, and how to handle them
 
 > Satellite images contain multiple spectral bands (channels) that capture different wavelengths of electromagnetic radiation, each revealing different information about Earth's surface. 
@@ -238,18 +240,30 @@ Code: [sentinel-satellite-image-demo.ipynb](/sentinel-satellite-image-demo.ipynb
 | **Data Type** | Backscatter intensity; phase information available | Reflectance/radiance measurements across wavelengths |
 | **Best For** | Change detection, flood mapping, terrain analysis, deformation monitoring | Vegetation monitoring, water quality, land cover classification, thermal analysis |
 
-
 - Demo code: https://www.kaggle.com/code/sndorburian/polsar-data-processing-using-python
 - Data for the demo: https://www.kaggle.com/datasets/sndorburian/saocom-geocoded-subset
 
-
-
 ## New space constellations
-
+> New Space satellite image providers are valuable because they make Earth observation faster, more flexible, and more accessible. Compared with traditional public missions, they often offer higher revisit frequency, quicker data delivery, and commercial services tailored to specific user needs.
+>
+> They are especially useful for applications that require near-real-time monitoring, such as agriculture, disaster response, infrastructure tracking, and environmental change detection. Their constellations can capture the same area more often, which helps researchers and companies detect short-term changes that might be missed by less frequent acquisitions.
+>
+> ![](/documentation/images/newspace_imagery.png)
+>
+> Another major advantage is usability. Many New Space providers offer analysis-ready products, cloud-based platforms, and APIs, which reduce the technical barrier for users who do not want to build a full remote sensing pipeline from scratch. This makes satellite data easier to integrate into research, business, and decision-making workflows.
 
 ### Analysis Ready Data
+> ARD commonly includes steps such as geometric correction or orthorectification, atmospheric correction, cloud masking, and sometimes re-gridding or harmonization. The goal is that data from different dates, seasons, viewing conditions, or sensors can be compared more reliably
+>
+> **Why it matters**
+ARD is especially useful for time-series analysis, machine learning, and large-scale monitoring because it removes much of the repetitive setup work that would otherwise be needed before analysis.
 
 ### Data cubes 
+> **What:** Data cubes are a way to organize satellite and geospatial data as one multidimensional structure instead of many separate image files. In Earth observation, they usually stack data by space and time, and often also by spectral band, so the same location can be analyzed across many dates in one consistent framework.
+
+![](/documentation/images/datacubes.png)
+
+> **Why:** Data cubes are useful because they shift analysis from a file-by-file workflow to a query-based workflow, which is much better for large time series and repeated monitoring. They are commonly built from analysis-ready data, so users can focus more on analysis and less on repeated preprocessing.
 
 ## Segment Any Model (SAM)
 
