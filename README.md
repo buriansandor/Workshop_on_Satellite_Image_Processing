@@ -159,11 +159,12 @@ Detailed descriptin in PDF: [gee-kaggle-setup-guide.pdf](/documentation/gee-kagg
 
 1. Register for Google Earth Engine (Free Noncommercial Tier)
 enable the Service Usage Consumer and  Earth Engine Resource Writer roles: https://earthengine.google.com/signup
-2. create a service account: https://console.cloud.google.com/iam-admin/serviceaccounts*
+2. create a service account: https://console.cloud.google.com/iam-admin/serviceaccounts
 3. Assign roles: Earth Engine Resource Writer and Service usage consumer
 4. get the JSON Key
 
 Running example: https://www.kaggle.com/code/sndorburian/using-landsat-images-with-google-earth-engine
+Code: [using-landsat-images-with-google-earth-engine.ipynb](/using-landsat-images-with-google-earth-engine.ipynb)
 
 #### Official USGS API
 1. Register an USGS account: https://ers.cr.usgs.gov/
@@ -179,9 +180,15 @@ https://pypi.org/project/landsatxplore/
 3. `pip install landsatxplore`
 4. Follow the instructions from the GitHub page of the project: https://github.com/yannforget/landsatxplore 
 
-more: https://medium.com/data-science/downloading-landsat-satellite-images-with-python-a2d2b5183fb7
+More: https://medium.com/data-science/downloading-landsat-satellite-images-with-python-a2d2b5183fb7
 
 ### Sentinel
+1. Create an account: Go to [dataspace.copernicus.eu](https://dataspace.copernicus.eu/) and register (free, EU-based)
+2. Open Sentinel Hub Dashboard: After logging in, click on "Sentinel Hub" under your profile icon
+3. Register an OAuth client: In the [Dashboard, create a new OAuth client → this will provide your `CLIENT_ID` and `CLIENT_SECRET` values](https://shapps.dataspace.copernicus.eu/dashboard/#/)
+
+Running Example: https://www.kaggle.com/code/sndorburian/sentinel-satellite-image-demo
+Code: [sentinel-satellite-image-demo.ipynb](/sentinel-satellite-image-demo.ipynb)
 
 ## Types of satellite image channels, and how to handle them
 
