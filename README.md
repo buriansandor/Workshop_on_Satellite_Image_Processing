@@ -6,6 +6,7 @@
 ![](/documentation/images/satellite_physics_fundamentals.png)
 
 When [we get a satellite image](https://gemini.google.com/share/894544f79ee2) we get the fraction of reflectance and radinace, but we are curious about the reflectance (this is a number between 0-1).
+
 $$\rho = \frac{\text{reflectance}}{\text{radiance}}$$
 
 ***For research we need rreflectance, because only this makes the data comparable in time and space.***
@@ -131,6 +132,12 @@ Python example: https://www.kaggle.com/code/sndorburian/discvr-epic-images
 
 
 - Main page for researchers: https://www.planet.com/science/
+
+1. register a free account on: https://eoiam-idp.eo.esa.int/myaccount
+2. visit: https://earth.esa.int/eogateway
+3. [search for `planetscope`](https://earth.esa.int/eogateway/search?text=planetscope)
+4. Go to the Data Archive: https://earth.esa.int/eogateway/catalog/planetscope-full-archive
+5. Fill the project proposal form: https://esatellus.service-now.com/csp?id=project_proposal&dataset=PlanetScope.Full.Archive
 
 </details>
 
