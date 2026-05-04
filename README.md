@@ -152,17 +152,28 @@ Install:
 ```
 
 ### Landsat
+Here are the most common methods to access to Landsat images: 
 
-### Google Earth Engine
+#### Google Earth Engine
+Detailed descriptin in PDF: [gee-kaggle-setup-guide.pdf](/documentation/gee-kaggle-setup-guide.pdf)
 
-### Official USGS API
+1. Register for Google Earth Engine (Free Noncommercial Tier)
+enable the Service Usage Consumer and  Earth Engine Resource Writer roles: https://earthengine.google.com/signup
+2. create a service account: https://console.cloud.google.com/iam-admin/serviceaccounts*
+3. Assign roles: Earth Engine Resource Writer and Service usage consumer
+4. get the JSON Key
+
+Running example: https://www.kaggle.com/code/sndorburian/using-landsat-images-with-google-earth-engine
+
+#### Official USGS API
 1. Register an USGS account: https://ers.cr.usgs.gov/
 2. Get an API key
 3. Get Access to the USGS MACHINE interface (this will give access to API to download satellite images). *This can take 48 hour!*
-4. 
 
-#### `landsatxplore`
-- https://pypi.org/project/landsatxplore/
+Example: https://www.kaggle.com/code/sndorburian/usgs-landsat-api
+
+##### `landsatxplore`
+https://pypi.org/project/landsatxplore/
 1. Register an USGS account: https://ers.cr.usgs.gov/
 2. To use `landsatxplore` you will need python3.11 environment, this means you have to probably scale down your system.
 3. `pip install landsatxplore`
